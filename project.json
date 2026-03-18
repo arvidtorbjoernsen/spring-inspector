@@ -1,0 +1,64 @@
+{
+  "name": "spring-inspector",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/spring-inspector/src",
+  "projectType": "application",
+  "tags": [
+    "scope:api",
+    "type:app",
+    "platform:spring-boot"
+  ],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "apps/api/mvnw -f apps/spring-inspector/pom.xml package -DskipTests -q",
+        "cwd": "."
+      },
+      "dependsOn": [
+        "test"
+      ],
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/pom.xml"
+      ],
+      "outputs": [
+        "{projectRoot}/target/*.jar"
+      ]
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "apps/api/mvnw -f apps/spring-inspector/pom.xml test",
+        "cwd": "."
+      },
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/pom.xml"
+      ],
+      "outputs": [
+        "{projectRoot}/target/surefire-reports"
+      ]
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo 'Spring inspector Maven checks passed'"
+      },
+      "dependsOn": [
+        "test"
+      ],
+      "cache": true
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "apps/api/mvnw -f apps/spring-inspector/pom.xml clean -q",
+        "cwd": "."
+      }
+    }
+  }
+}
+
