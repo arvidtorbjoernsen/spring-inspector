@@ -39,7 +39,7 @@ Add to `.vscode/mcp.json` in your workspace:
   "command": "java",
   "args": ["-jar", "/Users/<you>/.local/share/spring-inspector/spring-inspector.jar"],
   "env": {
-    "INSPECTOR_ACTUATOR_URL": "http://localhost:8081",
+    "INSPECTOR_ACTUATOR_URL": "http://localhost:18081",
     "INSPECTOR_API_DIR": "${workspaceFolder}/apps/api",
     "INSPECTOR_LOG_FILE": "/Users/<you>/.local/share/spring-inspector/spring-inspector.log"
   }
