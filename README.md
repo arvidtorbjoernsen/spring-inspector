@@ -50,7 +50,7 @@ Add to `.vscode/mcp.json` in your workspace:
 
 | Variable | Description | Default |
 |---|---|---|
-| `INSPECTOR_ACTUATOR_URL` | Base URL of the running Actuator endpoint | `http://localhost:8080` |
+| `INSPECTOR_ACTUATOR_URL` | Base URL of the running Actuator endpoint | `http://localhost:18082` |
 | `INSPECTOR_API_DIR` | Absolute path to the Maven project to build/test | *(required)* |
 | `INSPECTOR_LOG_FILE` | Path for the log file (keeps STDIO clean) | `/tmp/spring-inspector.log` |
 

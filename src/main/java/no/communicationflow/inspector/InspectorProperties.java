@@ -18,7 +18,13 @@ public class InspectorProperties {
      * Base URL of the running Spring Boot API actuator.
      * Override with env var {@code INSPECTOR_ACTUATOR_URL}.
      */
-    private String actuatorUrl = "http://localhost:8080";
+    private String actuatorUrl = "http://localhost:18082";
+
+    /**
+     * Base URL of the running Prometheus server.
+     * Override with env var {@code INSPECTOR_PROMETHEUS_URL}.
+     */
+    private String prometheusUrl = "http://localhost:9090";
 
     /**
      * Absolute (or workspace-relative) path to the {@code apps/api} directory.
