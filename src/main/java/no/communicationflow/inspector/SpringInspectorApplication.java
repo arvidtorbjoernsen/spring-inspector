@@ -8,7 +8,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @EnableConfigurationProperties(InspectorProperties.class)
 public class SpringInspectorApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(SpringInspectorApplication.class, args);
-  }
+	public static void main(String[] args) {
+		SpringApplication.run(SpringInspectorApplication.class, args);
+	}
+
 }
