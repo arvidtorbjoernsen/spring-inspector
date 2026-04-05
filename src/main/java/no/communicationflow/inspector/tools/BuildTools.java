@@ -63,7 +63,7 @@ public class BuildTools {
 		if (extraArgs != null && !extraArgs.isBlank()) {
 			cmd.addAll(List.of(extraArgs.trim().split("\\s+")));
 		}
-		return runMaven(cmd, Duration.ofMinutes(5));
+		return runMaven(cmd, Duration.ofMinutes(20));
 	}
 
 	@Tool(description = """
@@ -72,7 +72,7 @@ public class BuildTools {
 			Use before committing to verify all quality checks pass.
 			""")
 	public String mvnVerify() {
-		return runMaven(List.of("./mvnw", "verify", "-B", "--no-transfer-progress"), Duration.ofMinutes(10));
+		return runMaven(List.of("./mvnw", "verify", "-B", "--no-transfer-progress"), Duration.ofMinutes(25));
 	}
 
 	@Tool(description = """
